@@ -1,0 +1,71 @@
+﻿@model BusinessLayer.Person
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h4>Add Person</h4>
+<hr />
+
+<form asp-action="Create">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="FirstName"></label>
+        <div><span asp-validation-for="FirstName" class="text-danger"></span></div>
+        <input asp-for="FirstName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="LastName"></label>
+        <div><span asp-validation-for="LastName" class="text-danger"></span></div>
+        <input asp-for="LastName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Gender"></label>
+        <div><span asp-validation-for="Gender" class="text-danger"></span></div>
+        <select asp-for="Gender" class="form-control">
+            <option value="true">Female</option>
+            <option value="false">Male</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="BirthDate"></label>
+        <div><span asp-validation-for="BirthDate" class="text-danger"></span></div>
+        <input asp-for="BirthDate" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Phone"></label>
+        <div><span asp-validation-for="Phone" class="text-danger"></span></div>
+        <input asp-for="Phone" type="number" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Mail"></label>
+        <div><span asp-validation-for="Mail" class="text-danger"></span></div>
+        <input type="email" asp-for="Mail" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Address"></label>
+        <div><span asp-validation-for="Address" class="text-danger"></span></div>
+        <input asp-for="Address" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Nationality"></label>
+        <div><span asp-validation-for="Nationality" class="text-danger"></span></div>
+        <input asp-for="Nationality" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="IsAlive"></label>
+        <div><span asp-validation-for="IsAlive" class="text-danger"></span></div>
+        <select asp-for="IsAlive" class="form-control">
+            <option value="false">Dead</option>
+            <option value="true">Alive</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-default" />
+    </div>
+</form>
+
+<div class="text-center">
+    <a asp-action="Population">Back to people</a>
+</div>
+
